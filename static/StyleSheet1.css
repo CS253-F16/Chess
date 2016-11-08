@@ -1,0 +1,30 @@
+﻿.div1 {
+    display: inline-block;
+    width: 10vh;
+    height: 10vh;
+    padding: 0px;
+    margin:0px 0px 0px 0px;
+ 
+    border-collapse:collapse;
+    background-color:blue;
+    overflow:hidden;
+
+}
+.div2 {
+    display: inline-block;
+    width: 10vh;
+    height: 10vh;
+    padding: 0px;
+    border-collapse: collapse;
+    background-color:firebrick;
+    margin: 0px 0px 0px 0px;
+    overflow:hidden;
+
+}
+
+.image1 {
+    height:10vh;
+    width:10vh;
+    position:absolute;
+    overflow:hidden;
+}
