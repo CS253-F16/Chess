@@ -2,29 +2,59 @@
     display: inline-block;
     width: 10vh;
     height: 10vh;
-    padding: 0px;
-    margin:0px 0px 0px 0px;
- 
-    border-collapse:collapse;
     background-color:blue;
-    overflow:hidden;
-
 }
 .div2 {
     display: inline-block;
     width: 10vh;
     height: 10vh;
-    padding: 0px;
-    border-collapse: collapse;
     background-color:firebrick;
-    margin: 0px 0px 0px 0px;
-    overflow:hidden;
-
 }
-
-img {
-    height:10vh;
-    width:10vh;
-    position:absolute;
-    overflow:hidden;
+.blackRook {
+	background-image: url(../static/images/blackRook.png);
+	background-size: 10vh 10vh;
+}
+.blackKnight {
+	background-image: url(../static/images/blackKnight.png);
+	background-size: 10vh 10vh;
+}
+.blackBishop {
+	background-image: url(../static/images/blackBishop.png);
+	background-size: 10vh 10vh;
+}
+.blackQueen {
+	background-image: url(../static/images/blackQueen.png);
+	background-size: 10vh 10vh;
+}
+.blackKing {
+	background-image: url(../static/images/blackKing.png);
+	background-size: 10vh 10vh;
+}
+.blackPawn {
+	background-image: url(../static/images/blackPawn.png);
+	background-size: 10vh 10vh;
+}
+.whiteRook {
+	background-image: url(../static/images/whiteRook.png);
+	background-size: 10vh 10vh;
+}
+.whiteKnight {
+	background-image: url(../static/images/whiteKnight.png);
+	background-size: 10vh 10vh;
+}
+.whiteBishop {
+	background-image: url(../static/images/whiteBishop.png);
+	background-size: 10vh 10vh;
+}
+.whiteQueen {
+	background-image: url(../static/images/whiteQueen.png);
+	background-size: 10vh 10vh;
+}
+.whiteKing {
+	background-image: url(../static/images/whiteKing.png);
+	background-size: 10vh 10vh;
+}
+.whitePawn {
+	background-image: url(../static/images/whitePawn.png);
+	background-size: 10vh 10vh;
 }

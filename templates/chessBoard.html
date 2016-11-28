@@ -5,7 +5,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="../static/StyleSheet1.css" media="screen"/>
-    <script src="../static/JavaScript1.js" ></script>
+    <script src="../static/JavaScript1.js"></script>
     <title >Chess Python</title>
     
 </head>
@@ -13,83 +13,79 @@
 
 <p>Drag the pieces to play:</p>
 
-<div id="a8" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Rook" id="blackRook1" src="../static/images/blackRook.png" draggable="true" ondragstart="drag(event)" width="100" height="100"/></div>
-<div id="b8" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Knight" id="blackKnight1" src="../static/images/blackKnight.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /></div>
-<div id="c8" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Bishop" id="blackBishop1" src="../static/images/blackBishop.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /></div>
-<div id="d8" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Queen" id="blackQueen1" src="../static/images/blackQueen.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /></div>
-<div id="e8" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="King" id="blackKing1" src="../static/images/blackKing.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /></div>
-<div id="f8" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Bishop" id="blackBishop2" src="../static/images/blackBishop.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /></div>
-<div id="g8" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Knight" id="blackKnight2" src="../static/images/blackKnight.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /></div>
-<div id="h8" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Rook" id="blackRook2" src="../static/images/blackRook.png" draggable="true" ondragstart="drag(event)" width="100" height="100" /> </div>
+<div id="a8" class="div2 blackRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b8" class="div1 blackKnight" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c8" class="div2 blackBishop" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d8" class="div1 blackQueen" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e8" class="div2 blackKing" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f8" class="div1 blackBishop" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g8" class="div2 blackKnight" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h8" class="div1 blackRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a7" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn1" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="b7" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn2" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="c7" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn3" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="d7" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn4" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="e7" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn5" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="f7" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn6" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="g7" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn7" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="h7" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="blackPawn8" src="../static/images/blackPawn.png" draggable="true" ondragstart="drag(event)"/></div>
+<div id="a7" class="div1 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b7" class="div2 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c7" class="div1 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d7" class="div2 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e7" class="div1 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f7" class="div2 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g7" class="div1 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h7" class="div2 blackPawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a6" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="b6" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="c6" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="d6" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="e6" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="f6" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="g6" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="h6" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="a6" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b6" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c6" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d6" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e6" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f6" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g6" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h6" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a5" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="b5" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="c5" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="d5" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="e5" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="f5" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="g5" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="h5" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="a5" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b5" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c5" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d5" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e5" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f5" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g5" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h5" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a4" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="b4" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="c4" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="d4" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="e4" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="f4" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="g4" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="h4" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="a4" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b4" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c4" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d4" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e4" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f4" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g4" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h4" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a3" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="b3" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="c3" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="d3" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="e3" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="f3" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="g3" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="h3" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="a3" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b3" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c3" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d3" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e3" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f3" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g3" class="div1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h3" class="div2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a2" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn1" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="b2" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn2" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="c2" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn3" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="d2" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn4" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="e2" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn5" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="f2" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn6" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="g2" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn7" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
-<div id="h2" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Pawn" id="whitePawn8" src="../static/images/whitePawn.png" draggable="true" ondragstart="drag(event)"/></div>
+<div id="a2" class="div2 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b2" class="div1 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c2" class="div2 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d2" class="div1 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e2" class="div2 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f2" class="div1 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g2" class="div2 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h2" class="div1 whitePawn" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<div id="a1" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Rook" id="whiteRook1" src="../static/images/whiteRook.png" draggable="true" ondragstart="drag(event)" /></div>
-<div id="b1" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Knight" id="whiteKnight1" src="../static/images/whiteKnight.png" draggable="true" ondragstart="drag(event)" /></div>
-<div id="c1" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Bishop" id="whiteBishop1" src="../static/images/whiteBishop.png" draggable="true" ondragstart="drag(event)" ></div>
-<div id="d1" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Queen" id="whiteQueen1" src="../static/images/whiteQueen.png" draggable="true" ondragstart="drag(event)" /></div>
-<div id="e1" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="King" id="whiteKing1" src="../static/images/whiteKing.png" draggable="true" ondragstart="drag(event)" /></div>
-<div id="f1" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Bishop" id="whiteBishop2" src="../static/images/whiteBishop.png" draggable="true" ondragstart="drag(event)" ></div>
-<div id="g1" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Knight" id="whiteKnight2" src="../static/images/whiteKnight.png" draggable="true" ondragstart="drag(event)"  /></div>
-<div id="h1" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="Rook" id="whiteRook2" src="../static/images/whiteRook.png" draggable="true" ondragstart="drag(event)" /> </div>
+<div id="a1" class="div1 whiteRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="b1" class="div2 whiteKnight" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="c1" class="div1 whiteBishop" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="d1" class="div2 whiteQueen" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="e1" class="div1 whiteKing" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="f1" class="div2 whiteBishop" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="g1" class="div1 whiteKnight" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="h1" class="div2 whiteRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-
-
-
-
-   
+  
 {% endblock %}
 
 </body>

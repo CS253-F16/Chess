@@ -3,13 +3,15 @@
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+	ev.dataTransfer.setData("text", ev.target.className.split(" ")[1]);
+	ev.target.className = ev.target.className.split(" ")[0];
 }
 
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+	ev.target.className = ev.target.className.split(" ")[0];
+	ev.target.className += " " + data;
 }
    
 
