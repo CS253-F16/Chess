@@ -2,10 +2,8 @@
 """
     Flaskr Plus
     ~~~~~~
-
     A microblog example application written as Flask tutorial with
     Flask and sqlite3.
-
     :copyright: (c) 2015 by Armin Ronacher.
     :license: BSD, see LICENSE for more details.
 """
@@ -14,6 +12,8 @@ import os
 from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
     render_template, flash
+from werkzeug.security import generate_password_hash, \
+     check_password_hash
 
 # create our little application :)
 app = Flask(__name__)
@@ -27,6 +27,20 @@ app.config.update(dict(
     PASSWORD='default'
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+
+#Class from FLASK that stores as hash, not a password.
+class User(object):
+
+    def __init__(self, username, password):
+        self.username = username
+        self.set_password(password)
+
+    def set_password(self, password):
+        self.pw_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.pw_hash, password)
+
 
 
 def connect_db():
@@ -69,8 +83,7 @@ def close_db(error):
 
 @app.route('/main')
 def show_entries():
-
-    return render_template('chessBoard.html')
+	return render_template('chessBoard.html')
 
 
 
@@ -78,28 +91,36 @@ def show_entries():
 def login():
 	db = get_db()
 	if request.method == 'POST':
-		cur_password = db.execute('SELECT password FROM accounts WHERE username = ?', [request.form['username']])
+		cur = db.execute('SELECT password FROM accounts WHERE username = ?', [request.form['username']])
+		cur_password = cur.fetchall()
 		
-		if request.form['username'] == "admin" and request.form['password'] == "default":
-			session['logged_in'] = True
-			flash('You were logged in as the administrator')
-			return redirect(url_for('show_entries'))
-		
-		elif not cur_password:
+		#Checks to see if the username is used.
+		if not cur_password:
 			flash('Invalid username!')
+			return render_template('login.html')
 			
+		#Makes sure that you typed in information.
 		elif not request.form['username'] or not request.form['password']:
 			flash('Enter the missing information')
 
-		
-		elif request.form['password'] != cur_password:
-			flash('Invalid username!')
-		
-			
+		#Checks password.
 		else:
-			session['logged_in'] = True
-			flash('You were logged in')
-			return redirect(url_for('show_entries'))
+			cur1 = db.execute('SELECT password FROM accounts WHERE username = ?', [request.form['username']])
+			cur_password_str = str(cur1.fetchone()[0])
+			check = check_password_hash(cur_password_str, request.form['password'])
+
+			if check:
+				session['logged_in'] = True
+				flash('You were logged in')
+				return redirect(url_for('show_entries'))
+				
+				
+		
+			#Otherwise, logs in.	
+			else:
+				flash('Invalid password!')
+				
+		
 	return render_template('login.html')
 
 
@@ -115,23 +136,30 @@ def logout():
 def addAccount():
 	if request.method == 'POST':
 		db = get_db()
-		new_username = db.execute('SELECT username FROM accounts WHERE username = ?', [request.form['username']])
+		#Checks to see if the database has any information saved to the given username.
+		cur = db.execute('SELECT username FROM accounts WHERE username = ?', [request.form['username']])
+		check_existing_username = cur.fetchall()
+		
+		#Creates a password using a hash
+		new_account_password = User(request.form['username'], request.form['password'])
+		hash = new_account_password.pw_hash
+		
+		#If you don't type something into a box, then you get returned to the create account screen.
 		if not request.form['username'] or not request.form['password']	:
 			flash('Enter the missing information!')
 			return redirect(url_for('createAccount'))
-		
-		elif not new_username:
-			error = None
-			db.execute('INSERT INTO accounts (username, password) VALUES (?, ?)', [request.form['username'], request.form['password']])
-			db.commit()
-			#Above code will create your account for you, and then commit it to the database.
-			#It will prevent multiple accounts with the same username being created.
 			
-		
+		#If the username doesn't exist yet, it saves the username and a hash of the password input
+		#by the user.
+		elif not check_existing_username:
+			error = None
+			db.execute('INSERT INTO accounts (username, password) VALUES (?, ?)', [request.form['username'], hash])
+			db.commit()
 			flash('New account was successfully created. Please log in!')
 			return redirect(url_for('login'))
 			return render_template('login.html', error=error)
 		
+		#Prevents someone from making an account with a similar username.
 		else:
 			flash('Username already exists! Please log in.')
 			return redirect(url_for('createAccount'))
