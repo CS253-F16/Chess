@@ -105,18 +105,21 @@ def login():
 
 		#Checks password.
 		else:
+			#Selects the information from the SQL statement. Fetches the first item in the tuple.
+			#Turns the first item into a string. 
 			cur1 = db.execute('SELECT password FROM accounts WHERE username = ?', [request.form['username']])
 			cur_password_str = str(cur1.fetchone()[0])
+			
+			#Uses the check_password_hash from werkzeug.security which checks the hash of the password.
 			check = check_password_hash(cur_password_str, request.form['password'])
 
+			#Logs in if passwords match
 			if check:
 				session['logged_in'] = True
 				flash('You were logged in')
 				return redirect(url_for('show_entries'))
 				
-				
-		
-			#Otherwise, logs in.	
+			#Otherwise, returns an invalid password statement and makes you attempt to log in again.	
 			else:
 				flash('Invalid password!')
 				
@@ -169,6 +172,24 @@ def addAccount():
 @app.route('/createAccount')	
 def createAccount():
 	return render_template('createAccount.html')
+	
+	
+#Submit data to server for every drop (not drag) event.
+@app.route('/action1', methods=['POST'])
+def action1():
+	db1 = get_db()
+	db1.execute('Insert into action1 (input1, input2) values (?, ?)', [request.form['textInput1'], request.form['textInput2']])
+	
+	
+	cur = db1.execute('SELECT input1, input2 FROM action1 order by id desc')
+	action1 = cur.fetchall()
+	#db`
+	flash('Javascript sends successfully') #Happens when loads new page.
+	flash(request.form['textInput1'])
+	flash(request.form['textInput2'])
+#	return redirect(url_for('show_entries'))
+	return render_template('chessBoard.html', action1=action1)
+
 	
 	
 

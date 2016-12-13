@@ -1,6 +1,8 @@
 <!doctype html>
 <title>Chess</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='StyleSheet1.css') }}">
+<script src="../static/JavaScript1.js"></script>
 <div class="page">
   <h1>Chess</h1>
   <div class="metanav">
@@ -13,5 +15,6 @@
   {% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
-  {% block body %}{% endblock %}
+  {% block body %}
+  {% endblock %}
 </div>

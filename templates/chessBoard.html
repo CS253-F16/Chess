@@ -1,19 +1,11 @@
 ﻿{% extends "layout.html" %}
 {% block body %}
 
-<!DOCTYPE HTML>
-<html>
-<head>
-    <link rel="stylesheet" href="../static/StyleSheet1.css" media="screen"/>
-    <script src="../static/JavaScript1.js"></script>
-    <title >Chess Python</title>
-    
-</head>
-<body>
+
 
 <p>Drag the pieces to play:</p>
 
-<div id="a8" class="div2 blackRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="a8" class="div2 blackRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)" value=1 ></div>
 <div id="b8" class="div1 blackKnight" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <div id="c8" class="div2 blackBishop" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <div id="d8" class="div1 blackQueen" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -86,6 +78,35 @@
 <div id="h1" class="div2 whiteRook" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
   
+  
+	<form id="form1" action="/action1" method="post"> 
+<!--<form action="{{ url_for('action1') }}" method="post"  id="form1">-->
+	<p>what is this form doing here?</p>
+	<p> Chess piece class </p>
+	<input type="text" name="textInput1"  id="textInput1"></input>
+	<p> Drop Target </p>
+	<input type="text" name="textInput2"  id="textInput2"></input>
+	<p> Drag/starting Target </p>
+	<input type="text" name="textInput3"  id="textInput3"></input>
+</form>
+
+<p id="p1" name="id1">	</p>
+<br>
+<p id="p2" name="id2">	</p>
+
+<ul class="action1"> 
+{% for a in action1 %}
+    <li>
+        <h3>{{ a.input1|safe }}</h3>
+        <h3>{{ a.input2|safe }}<h3>
+    </li>
+</ul>
+
+
+
+
+<!--<iframe name="frame1" style="width:0; height:0; border:0, border:none;" src=""></iframe>-->
+{% endfor %}
 {% endblock %}
 
 </body>

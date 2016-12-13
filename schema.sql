@@ -4,3 +4,11 @@ create table accounts (
 	username text not null UNIQUE,
 	password text not null
 );
+
+drop table if exists action1;
+create table action1
+(
+	id integer primary key autoincrement,
+	input1 text,
+	input2 text 
+);
