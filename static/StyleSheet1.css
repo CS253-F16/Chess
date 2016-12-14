@@ -58,3 +58,18 @@
 	background-image: url(../static/images/whitePawn.png);
 	background-size: 10vh 10vh;
 }
+
+body            { font-family: sans-serif; background-image: url(../static/images/chess_background.jpg); }
+a, h1, h2, h3   { color: black; }
+h1, h2, h3      { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 2px solid black; }
+h2              { font-size: 1.4em; margin-top: 1em; }
+h3              { font-size: 1.1em; margin-top: 0.2em; }
+
+.page           { margin: 2em auto; width: 35em; border: 5px solid grey;
+                  padding: 0.8em; background: white; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background-color: grey; }
+.flash          { background-color: red; padding: 0.5em;
+                  border: 1px solid blue; }
+.error          { background: red; padding: 0.5em; }

@@ -254,6 +254,7 @@ function validMove(pieceName1, dropPosition1, startPosition1)
 function drag(ev) {
 	ev.dataTransfer.setData("text", ev.target.className.split(" ")[1]);
 	ev.target.className = ev.target.className.split(" ")[0];
+	ev.target.draggable = false;
 	document.getElementById("textInput3").value = document.getElementById(ev.target.id).id;	
 }
 
@@ -264,6 +265,7 @@ function drop(ev)
     var data = ev.dataTransfer.getData("text");
 	ev.target.className = ev.target.className.split(" ")[0];
 	ev.target.className += " " + data;
+	ev.target.draggable = true;
 
 	pieceName1 = ev.target.className;
 
